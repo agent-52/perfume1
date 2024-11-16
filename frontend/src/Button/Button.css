@@ -10,8 +10,10 @@
     place-items: center;
     padding: 0.7rem 5rem;
     font-weight: 550;
+    transition: all 0.2s ease-in;
     
 }
 .b1:hover{
-    
+    background-color: #D5AFA1;
+    color: white;
 }
