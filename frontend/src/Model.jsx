@@ -50,10 +50,11 @@ const Model = ({path, scale}) =>{
                    
                     model = gltf.scene
                     model.rotation.y = -Math.PI*0.75
-                    // model.rotation.z = Math.PI*0.05
+                   
+                    
                     
                     // model.position.y = -0.2
-                    // model.position.x = -2
+                    // model.position.x = 0.2
                     
                     scene.add(gltf.scene)
                     // const axesHelper = new THREE.AxesHelper( 5 );
@@ -154,7 +155,7 @@ const Model = ({path, scale}) =>{
             controls.target.set(0, 0.75, 0)
             controls.enableDamping = true
             controls.enableZoom = false
-            // controls.enableRotate = false
+            controls.enableRotate = false
             controls.minPolarAngle = 0;
 		    controls.maxPolarAngle =  Math.PI * 0.5;
             
@@ -184,8 +185,12 @@ const Model = ({path, scale}) =>{
 
                 //rotation
                 if(model){
-                    model.rotation.y = (-Math.PI*0.75)+(elapsedTime*0.2)
-                    
+                    // model.rotation.y = (-Math.PI*0.75)+(Math.sin(-elapsedTime*0.2))
+                    canvas.addEventListener("mousemove", (e)=>{
+                        model.rotation.y = (-Math.PI*0.75)+(-e.clientX*0.0002)
+                        // model.rotation.x = -e.clientY*0.0002
+                    })
+                    // model.position.x = 0.2
                 }
                 
                 

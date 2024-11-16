@@ -7,6 +7,13 @@
     font-family: f1;
     src: url("/public/fonts/Melodrama-Medium.otf");
   }
+
+  *{
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+  }
+  
   
   .webgl{
     /* width: 100%;
@@ -24,20 +31,27 @@
     width: 100vw;
     min-height:100vh;
     box-sizing: border-box;
-    margin: 0px;
+   
     overflow-x: hidden;
-    padding: 0px;
+    
     background-color: var(--lightPink);
   }
+  
   body{
     position: relative;
     width: 100vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     /* min-height:100vh; */
     box-sizing: border-box;
     margin: 0px;
     overflow-x: hidden;
     padding: 0px;
     background-color: var(--lightPink);
+  }
+
+  /*padding*/
+  .pi1{
+    padding-inline: 6rem;
   }
 
   .border{
@@ -58,10 +72,55 @@
   .grid{
     display: grid;
   }
+  
   .placeCenter{
     display: grid;
     place-items: center;
   }
+
+  /*flex*/
+  .flex{
+    display: flex;
+  }
+  .flexC{
+    display: flex;
+    flex-direction: column;
+  }
+  .flexCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .alignC{
+    align-items: center;
+  }
+  .justifyBw{
+    justify-content: space-between;
+  }
+  .justifyR{
+    justify-content: right;
+  }
+
+
+  /*margins*/
+  .mgT1{
+    margin-top: 1rem;
+  }
+
+
+  /*gap*/
+  .gap0{
+    gap: 0.25rem;
+  }
+  .gap1{
+    gap: 1rem;
+  }
+  .gap2{
+    gap: 2rem;
+  }
+
+
 
   /*colors*/
   .cWhite{
@@ -69,12 +128,32 @@
   }
 
   /*font size*/
+  .sm0{
+    font-size: 1.1rem;
+  }
+  .sm1{
+    font-size: 1.7rem;
+  }
+  .sm2{
+    font-size: 1.9rem;
+  }
 .xl{
     font-size: 24vw;
     line-height: 0;
+}
+
+/*font weight*/
+.bold{
+    font-weight: 600;
+}
+.lightBold{
+    font-weight: 550;
 }
 
 /*font family*/
 .f1{
   font-family: f1;  
 } 
+.f2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
