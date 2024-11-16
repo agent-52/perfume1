@@ -65,6 +65,29 @@ const Model = ({path, scale}) =>{
                     // mixer = new THREE.AnimationMixer(gltf.scene)
                     // const action = mixer.clipAction(gltf.animations[2])
                     // action.play()
+
+                    gsap.to(model.rotation, { duration: 2, y: 5.5 ,
+                        scrollTrigger:{
+                            trigger: ".page1",
+                            scrub: 2.5,
+                            start: "5% 5%",
+                            end: "bottom 30%",
+                            // markers: true,
+                    
+                    
+                        }
+                    });
+                    // gsap.to(model.position, { duration: 2, y: 7 ,
+                    //     scrollTrigger:{
+                    //         trigger: ".page2",
+                    //         scrub: 2.5,
+                    //         start: "15% 15%",
+                    //         end: "bottom top",
+                    //         // markers: true,
+                    
+                    
+                    //     }
+                    // });
             
                  
             
@@ -186,10 +209,7 @@ const Model = ({path, scale}) =>{
                 //rotation
                 if(model){
                     // model.rotation.y = (-Math.PI*0.75)+(Math.sin(-elapsedTime*0.2))
-                    canvas.addEventListener("mousemove", (e)=>{
-                        model.rotation.y = (-Math.PI*0.75)+(-e.clientX*0.0002)
-                        // model.rotation.x = -e.clientY*0.0002
-                    })
+                    
                     // model.position.x = 0.2
                 }
                 

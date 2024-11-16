@@ -9,6 +9,9 @@ header{
     padding-inline: 6rem;
     padding-block: 1.5rem;
     align-items: center;
+    /* background-color: #fff3ee1a;
+    backdrop-filter: blur(0.2rem); */
+    z-index: 10000000000000000;
     
 }
 .sticks{
